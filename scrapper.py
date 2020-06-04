@@ -29,8 +29,8 @@ def tvn24_parse_page(n, f):
     for title in titles:
         f.write('tvn24\t' + title.find(text=True) + '\n')
 
-with open('fronda.tsv', 'w', encoding='utf-8') as f:
-    for i in range(200):
-        fronda_parse_page(i, f)
-    for i in range(360):
+with open('big-data-tvn.tsv', 'w', encoding='utf-8') as f:
+    # for i in range(3000):
+        # fronda_parse_page(i, f)
+    for i in range(5400):
         tvn24_parse_page(i, f)
